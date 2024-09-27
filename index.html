@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- AOS CSS for Animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #e9ecef; /* Light background */
+    }
+    section {
+      padding: 80px 0; /* Increased padding */
+    }
+    #home {
+      background-color: #f8f9fa;
+      padding: 120px 0;
+    }
+    #about {
+      background-color: #ffffff;
+    }
+    #skills {
+      background-color: #f2f2f2;
+    }
+    #contact {
+      background-color: #ffffff;
+    }
+    .social-icons a {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      padding: 12px 24px; /* Enhanced button size */
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+    footer {
+      background-color: #343a40;
+      padding: 30px;
+      color: white;
+    }
+    .skill-icon {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+    .skill-icon:hover {
+      color: #007bff;
+    }
+    .form-control {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    h2[data-aos] {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="text-center">
+    <div class="container">
+      <h1 data-aos="fade-up">Hello, I'm <strong>Emmanuel Chukwuemeka-Eri</strong></h1>
+      <p data-aos="fade-up">Welcome to my personal portfolio website.</p>
+      <a href="#skills" class="btn btn-primary mt-4" data-aos="fade-up">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="text-center">
+    <div class="container">
+      <h2 data-aos="fade-right">About Me</h2>
+      <p data-aos="fade-left">I'm an aspiring computer scientist with a passion for web development...</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="text-center">
+    <div class="container">
+      <h2 data-aos="zoom-in">My Skills</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-2 m-3" data-aos="zoom-in">
+          <i class="fab fa-html5 skill-icon"></i>
+          <h4>HTML5</h4>
+        </div>
+        <div class="col-md-2 m-3" data-aos="zoom-in">
+          <i class="fab fa-css3-alt skill-icon"></i>
+          <h4>CSS3</h4>
+        </div>
+        <div class="col-md-2 m-3" data-aos="zoom-in">
+          <i class="fab fa-js-square skill-icon"></i>
+          <h4>JavaScript</h4>
+        </div>
+        <div class="col-md-2 m-3" data-aos="zoom-in">
+          <i class="fas fa-code skill-icon"></i>
+          <h4>C#</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="text-center">
+    <div class="container">
+      <h2 data-aos="zoom-in">Contact Me</h2>
+      <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message!');">
+        <div class="form-group" data-aos="fade-up">
+          <label for="name">Name*</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group" data-aos="fade-up">
+          <label for="email">Email*</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group" data-aos="fade-up">
+          <label for="message">Message*</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" data-aos="fade-up">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2024 Emmanuel Chukwuemeka-Eri. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  
+</body>
+</html>
